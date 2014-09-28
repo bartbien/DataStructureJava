@@ -1,7 +1,11 @@
 package com.phoenixjcam.collection.stack;
 
+import java.util.NoSuchElementException;
+
 /**
- * LIFO stack
+ * LIFO stack - linked stack - without array holder. <br>
+ * This implementation uses a singly-linked list, <br>
+ * see Node nested class - Node{@code <E>}  with two fields E item and Node{@code <E>} next.<br>
  * 
  * @author Bart88
  *
@@ -48,11 +52,54 @@ public class Stack<E>
 	 */
 	public void push(E item)
 	{
-		Node<E> oldfirst = first;
+		Node<E> oldFirst = first;
 		first = new Node<E>();
+
 		first.item = item;
-		first.next = oldfirst;
+		first.next = oldFirst;
+
 		size++;
+	}
+
+	/**
+	 * Removes item from top of stack
+	 * 
+	 * @throws NoSuchElementException
+	 *             - if stack is empty
+	 */
+	public void pop()
+	{
+		if (isEmpty())
+			throw new NoSuchElementException("Empty stack");
+
+		Node<E> oldFirst = first;
+
+		first = null;
+		size--;
+
+		first = oldFirst.next;
+	}
+
+	/**
+	 * Return item from top of stack (doesn't remove like pop())
+	 * 
+	 * @throws NoSuchElementException
+	 *             - if stack is empty
+	 */
+	public Node<E> peek()
+	{
+		if (isEmpty())
+			throw new NoSuchElementException("Empty stack");
+
+		return first;
+	}
+
+	public boolean isEmpty()
+	{
+		if (size == 0)
+			return true;
+
+		return false;
 	}
 
 	/**
@@ -66,8 +113,33 @@ public class Stack<E>
 
 		s.push("test1");
 		s.push("test2");
+
+		// false
+		s.isEmpty();
+
+		System.out.println("Item ontop -> " + s.peek().item);
+		System.out.println("Next Item -> " + s.peek().next.item);
+
+		s.pop();
+		s.pop();
+
 		s.push("test3");
 		s.push("test4");
 
+		System.out.println("Item ontop -> " + s.peek().item);
+		System.out.println("Next Item -> " + s.peek().next.item);
+
+		s.pop();
+		s.pop();
+
+		// null exception - empty stack
+		// s.pop();
+
+		// null exception - empty stack
+		// System.out.println("Item ontop -> " + s.peek().item);
+		// System.out.println("Next Item -> " + s.peek().next.item);
+
+		// true
+		s.isEmpty();
 	}
 }
