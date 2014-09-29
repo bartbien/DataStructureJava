@@ -1,6 +1,5 @@
 package com.phoenixjcam.collection.list;
 
-
 /**
  * 
  * @author Bart88
@@ -41,7 +40,7 @@ public class ArrayList<E> implements List<E>
 		int newCapacity = oldCapacity + (oldCapacity / 2);
 
 		arrayElements = new Object[newCapacity];
-		
+
 		for (int i = 0; i < tmpArrayElements.length; i++)
 		{
 			arrayElements[i] = tmpArrayElements[i];
@@ -52,6 +51,17 @@ public class ArrayList<E> implements List<E>
 	{
 		if (size >= arrayElements.length)
 			grow();
+	}
+
+	/**
+	 * Make sure that index is qualify for further operation.
+	 * 
+	 * @param index
+	 */
+	public void rangeCheck(int index)
+	{
+		if (index > size || index < 0)
+			throw new IndexOutOfBoundsException("Out of bounds");
 	}
 
 	@Override
@@ -66,56 +76,130 @@ public class ArrayList<E> implements List<E>
 	@Override
 	public void add(int index, E element)
 	{
-		// TODO Auto-generated method stub
+		++size;
+		ensureCapacity();
 
+		rangeCheck(index);
+
+		// the number of elements to be copied
+		int length = size - index;
+
+		// native method JNI (should be efficient and fast)
+		// make exactly one cell at the index position for adding new element
+		System.arraycopy(arrayElements, index, arrayElements, index + 1, length);
+
+		arrayElements[index] = element;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public void get(int index)
+	public E get(int index)
 	{
-		// TODO Auto-generated method stub
-
+		return (E) arrayElements[index];
 	}
 
 	@Override
 	public void set(int index, E element)
 	{
-		// TODO Auto-generated method stub
+		rangeCheck(index);
 
+		arrayElements[index] = element;
 	}
 
 	@Override
 	public void remove(int index)
 	{
-		// TODO Auto-generated method stub
+		rangeCheck(index);
 
+		// the number of elements to be copied
+		int length = size - 1 - index;
+
+		// remove element by override the index position
+		// with array elements
+		System.arraycopy(arrayElements, index + 1, arrayElements, index, length);
+
+		arrayElements[--size] = null;
 	}
 
 	@Override
 	public boolean isEmpty()
 	{
-		// TODO Auto-generated method stub
+		if (size == 0)
+		{
+			return true;
+		}
+
 		return false;
 	}
 
 	@Override
 	public int size()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
+
+	// ------------------------------------------------
+	// ---- MAIN only for tests -----------------------
+	// ------------------------------------------------
 
 	public static void main(String[] args)
 	{
-		// ArrayList<String> arrayList = new ArrayList<String>(-20);
+		// TEST functionality below to invoke method
 		ArrayList<String> arrayList = new ArrayList<String>();
 
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			arrayList.add("test" + i);
 		}
 
-		arrayList.add("test1");
-		arrayList.add("test2");
+		addIndexTest();
+	}
+
+	// ------------------------------------------------
+	// ---- TESTS OF FUNCTIONLITY FOR DEBUG MODE ------
+	// ------------------------------------------------
+
+	public static void initialCapacityTest()
+	{
+		ArrayList<String> arrayList = new ArrayList<String>(-20);
+	}
+
+	public static void addTest()
+	{
+		ArrayList<String> arrayList = new ArrayList<String>();
+
+		for (int i = 0; i < 5; i++)
+		{
+			arrayList.add("test" + i);
+		}
+	}
+
+	public static void addIndexTest()
+	{
+		ArrayList<String> arrayList = new ArrayList<String>();
+
+		for (int i = 0; i < 5; i++)
+		{
+			arrayList.add("test" + i);
+		}
+
+		arrayList.set(2, "setTest");
+		String getTest = arrayList.get(2);
+
+		arrayList.add(3, "add at specify index test");
+	}
+
+	public static void removeTest()
+	{
+		ArrayList<String> arrayList = new ArrayList<String>();
+
+		for (int i = 0; i < 5; i++)
+		{
+			arrayList.add("test" + i);
+		}
+
+		arrayList.remove(2);
+
+		arrayList.add("test" + 6);
 	}
 }
