@@ -39,20 +39,39 @@ public class JavaCollectionExample
 
 	public static void main(String[] args)
 	{
+		linkedListTests();
+	
+	}
+
+	public static void linkedListTests()
+	{
+		LinkedList<String> linkedList = new LinkedList<String>();
+		
+		linkedList.addLast("test3");
+		linkedList.addLast("test4");
+		linkedList.addLast("test5");
+		
+		linkedList.addFirst("test2");
+		linkedList.addFirst("test1");
+		
+		linkedList.addLast("test6");
 		
 		
+	}
+
+	public static void arrayListTests()
+	{
 		// ArrayList<String> arrTest = new ArrayList<String>(20);
-		
 		ArrayList<String> arrTest = new ArrayList<String>();
-		
+
 		for (int i = 0; i < 5; i++)
 		{
 			arrTest.add("test" + i);
 		}
-		
+
 		arrTest.remove(1);
-		
+
 		arrTest.add("test" + 6);
-		
+
 	}
 }
