@@ -29,7 +29,7 @@ public interface List<E>
 	 * 
 	 * @param index
 	 */
-	void get(int index);
+	E get(int index);
 
 	/**
 	 * Replace the element at the position within specified element.

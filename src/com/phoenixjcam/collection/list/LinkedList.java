@@ -55,17 +55,16 @@ public class LinkedList<E> implements List<E>
 	}
 
 	@Override
-	public void get(int index)
+	public E get(int index)
 	{
 		// TODO Auto-generated method stub
-
+		return null;
 	}
 
 	@Override
 	public void set(int index, E element)
 	{
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override

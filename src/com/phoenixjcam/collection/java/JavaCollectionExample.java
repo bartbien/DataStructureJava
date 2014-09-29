@@ -45,17 +45,14 @@ public class JavaCollectionExample
 		
 		ArrayList<String> arrTest = new ArrayList<String>();
 		
-		for (int i = 0; i < 15; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			arrTest.add("test" + i);
 		}
 		
-		arrTest.add("test16");
-		arrTest.add("test17");
-		arrTest.add("test18");
-		
 		arrTest.remove(1);
 		
-		arrTest.add("test4");
+		arrTest.add("test" + 6);
+		
 	}
 }
