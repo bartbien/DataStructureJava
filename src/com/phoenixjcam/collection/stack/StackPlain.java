@@ -1,4 +1,4 @@
-package com.phoenixjcam.collection.stack.plain;
+package com.phoenixjcam.collection.stack;
 
 /**
  * By plain means on specify type in this case String
