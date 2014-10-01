@@ -1,6 +1,11 @@
 package com.phoenixjcam.collection.list;
 
 /**
+ * LinkedList has ability to behave like: 
+ * Queue - LIFO
+ * Dequeue - Double ended queue
+ * Stack - FIFO
+ * Double ended list
  * 
  * 
  * @author Bart88
