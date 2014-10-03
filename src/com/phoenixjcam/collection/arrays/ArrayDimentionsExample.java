@@ -132,9 +132,120 @@ public class ArrayDimentionsExample
 			}
 		}
 	}
+	
+	public static void fourDimentionalArray()
+	{
+		int arr[][][][] = 
+			{
+				{
+					{
+						{0, 1},
+						{2, 3}
+					},
+					{
+						{4, 5},
+						{6, 7}
+					}
+				},
+				{
+					{
+						{8, 9},
+						{10, 11}
+					},
+					{
+						{12, 13},
+						{14, 15}
+					}
+				}
+			};
+		
+		int[] arrTest = arr[0][0][0];
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			for (int j = 0; j < arr[i].length; j++)
+			{
+				for (int k = 0; k < arr[i][j].length; k++)
+				{
+					for (int l = 0; l < arr[i][j][k].length; l++)
+					{
+						System.out.println(arr[i][j][k][l]);
+					}
+				}
+			}
+		}
+	}
+	
+	public static void fiveDimentionalArray()
+	{
+		int arr[][][][][] = 
+			{
+				{
+					{
+						{
+							{0, 1, 111},
+							{2, 3, 111}
+						},
+						{
+							{4, 5},
+							{6, 7}
+						}
+					},
+					{
+						{
+							{8, 9},
+							{10, 11}
+						},
+						{
+							{12, 13},
+							{14, 15}
+						}
+					}
+				},
+				{
+					{
+						{
+							{16, 17},
+							{18, 19}
+						},
+						{
+							{20, 21},
+							{22, 23}
+						}
+					},
+					{
+						{
+							{24, 25},
+							{26, 27}
+						},
+						{
+							{28, 29},
+							{30, 31}
+						}
+					}
+				}
+			};
+		
+		for (int i = 0; i < arr.length; i++)
+		{
+			for (int j = 0; j < arr[i].length; j++)
+			{
+				for (int k = 0; k < arr[i][j].length; k++)
+				{
+					for (int l = 0; l < arr[i][j][k].length; l++)
+					{
+						for (int m = 0; m < arr[i][j][k][l].length; m++)
+						{
+							System.out.println(arr[i][j][k][l][m]);
+						}
+					}
+				}
+			}
+		}
+	}
 
 	public static void main(String args[])
 	{
-		multiDimentionalArray();
+		fiveDimentionalArray();
 	}
 }
