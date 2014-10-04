@@ -8,10 +8,18 @@ main data structure - simple implementation in java
 
 ================= How to to something?
 
-1. How to implement a queue using two stacks?
-com.phoenixjcam.collection.queue.TwoStacksQueue
+Questions:
 
-2.
+1. How to implement a queue using two stacks?
+answer: TwoStacksQueue class
+
+2. How would you approach a problem of looking for a string in a very big file (few TB of data)?
+answer: FewTBData class
+
+3.
+
+Answers:
+ questions folder
 
 Exercise:
 http://algs4.cs.princeton.edu/home/

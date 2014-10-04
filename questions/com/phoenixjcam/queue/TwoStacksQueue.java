@@ -1,4 +1,4 @@
-package com.phoenixjcam.collection.queue;
+package com.phoenixjcam.queue;
 
 import java.util.Stack;
 
