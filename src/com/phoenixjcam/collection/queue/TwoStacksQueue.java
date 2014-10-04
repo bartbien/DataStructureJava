@@ -9,7 +9,7 @@ import java.util.Stack;
  *
  * @param <E>
  */
-public class Queue<E>
+public class TwoStacksQueue<E>
 {
 
 	private Stack<E> inbox = new Stack<E>();
@@ -34,7 +34,7 @@ public class Queue<E>
 
 	public static void main(String[] args)
 	{
-		Queue<String> queue = new Queue<String>();
+		TwoStacksQueue<String> queue = new TwoStacksQueue<String>();
 		queue.queue("test1");
 		queue.queue("test2");
 
