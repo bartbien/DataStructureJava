@@ -1,17 +1,18 @@
-package com.phoenixjcam.collection.java;
+package com.phoenixjcam.collection.jdk;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.TreeMap;
 import java.util.Vector;
 
 import com.phoenixjcam.collection.stack.LinkedStack;
 
-public class JavaCollectionExample
+public class JDKCollectionExample
 {
-	public JavaCollectionExample()
+	public JDKCollectionExample()
 	{
 
 	}
@@ -55,6 +56,12 @@ public class JavaCollectionExample
 		java.util.Map<Integer, String> map;
 		java.util.HashMap<Integer, String> hashMap;
 		java.util.TreeMap<Integer, String> treeMap;
+		
+		// Sets 
+		java.util.Set<String> set;
+		java.util.TreeSet<String> treeSet;
+		java.util.HashSet<String> hashSet;
+		java.util.LinkedHashMap<Integer, String> linkedHashMap;
 
 		// Since:JDK1.0 - synchronized
 		// recommended to use HashMap<K, V> or ConcurrentHashMap<K, V>
@@ -83,8 +90,31 @@ public class JavaCollectionExample
 
 		// priorityQueueTest();
 
-		copyArrayTest();
+		//copyArrayTest();
+		
+		differentTypeCollectionTest();
 
+	}
+
+	private static void differentTypeCollectionTest()
+	{
+		LinkedList<Object> ll = new LinkedList<Object>();
+		ll.add("test");
+		ll.add(1);
+		ll.add(true);
+		ll.add(2.888);
+		
+		LinkedList<TreeMap<ArrayList<String>, ArrayList<LinkedList<String>>>> monesterTest = new LinkedList<TreeMap<ArrayList<String>,ArrayList<LinkedList<String>>>>();
+		
+		
+		List<Object> al = new ArrayList<Object>();
+		al.add("test");
+		al.add(1);
+		al.add(true);
+		al.add(2.888);
+		al.add(al);
+		al.add(ll);
+		
 	}
 
 	public static void priorityQueueTest()
@@ -98,6 +128,8 @@ public class JavaCollectionExample
 
 		priorityQueue.remove();
 	}
+	
+	
 
 	public static void linkedListTests()
 	{
