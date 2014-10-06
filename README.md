@@ -1,12 +1,31 @@
 DataStructureJava
 =================
 
-main data structure - simple implementation in java 
+main data structure - simple implementation in java
+How to use collection:
 -> JDK (Java collection)
 -> Guava (Google)
 -> Commons-collections (Apache)
 
-================= How to to something?
+Main Abstract Data Structure - ADS
+List (ArrayList, LinkedList, Vector)
+Stack (FIFO)
+Queue (LIFO, Deque - double ended queue)
+
+interface Map<Key, Value>
+TreeMap<K,V>
+HashMap<K,V>
+LinkedHashMap<K,V>
+Hashtable<K, V> extends Dictionary<K, V> - JDK 1.0
+
+interface Set
+TreeSet<E>
+HashSet<E>
+
+Tree
+Trie
+
+=================
 
 Questions:
 
@@ -16,7 +35,9 @@ answer: TwoStacksQueue class
 2. How would you approach a problem of looking for a string in a very big file (few TB of data)?
 answer: FewTBData class
 
-3.
+3. 
+
+
 
 Answers:
  questions folder

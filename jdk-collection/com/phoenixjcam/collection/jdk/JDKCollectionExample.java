@@ -56,12 +56,13 @@ public class JDKCollectionExample
 		java.util.Map<Integer, String> map;
 		java.util.HashMap<Integer, String> hashMap;
 		java.util.TreeMap<Integer, String> treeMap;
+		java.util.LinkedHashMap<Integer, String> linkedHashMap;
+
 		
 		// Sets 
 		java.util.Set<String> set;
 		java.util.TreeSet<String> treeSet;
 		java.util.HashSet<String> hashSet;
-		java.util.LinkedHashMap<Integer, String> linkedHashMap;
 
 		// Since:JDK1.0 - synchronized
 		// recommended to use HashMap<K, V> or ConcurrentHashMap<K, V>
@@ -73,7 +74,6 @@ public class JDKCollectionExample
 		java.util.Dictionary<Integer, String> dictionary;
 
 		// In a priority queue, an element with high priority is served before an element with low priority.
-		// A priority queue is an abstract concept like "a list" or "a map";
 		// just as a list can be implemented with a linked list or an array, a priority queue can be implemented with a
 		// heap
 		java.util.PriorityQueue<String> priorityQueue;
