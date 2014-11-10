@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="jdk-utilCollection"/>
 	<classpathentry kind="src" path="uncommit"/>
+	<classpathentry kind="src" path="jdk-impl"/>
 	<classpathentry kind="src" path="guava"/>
 	<classpathentry kind="src" path="commons-apache"/>
 	<classpathentry kind="src" path="questions"/>
