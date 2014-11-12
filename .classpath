@@ -7,8 +7,16 @@
 	<classpathentry kind="src" path="questions"/>
 	<classpathentry kind="src" path="utilConcurrentCollection"/>
 	<classpathentry kind="src" path="jdk-collection"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/18.0/guava-18.0.jar" sourcepath="M2_REPO/com/google/guava/guava/18.0/guava-18.0-sources.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-collections4/4.0/commons-collections4-4.0.jar" sourcepath="M2_REPO/org/apache/commons/commons-collections4/4.0/commons-collections4-4.0-sources.jar"/>
+	<classpathentry kind="src" path="performance"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
