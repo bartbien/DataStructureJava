@@ -1,18 +1,19 @@
-package performance.jdk.lists;
+package performance.jdk.collection.lists;
 
 import java.util.LinkedList;
 
 import org.junit.Test;
 
-import utils.CommonUtils;
+import performance.jdk.collection.runner.SizeUtils;
 
-public class TestLinkedList
+public class LinkedListTest
 {
+
 	@Test
 	public void addLinkedList()
 	{
 		LinkedList<String> linkedList = new LinkedList<String>();
-		for (int i = 0; i < CommonUtils.million; i++)
+		for (int i = 0; i < SizeUtils.size; i++)
 		{
 			linkedList.add("test" + i);
 		}
