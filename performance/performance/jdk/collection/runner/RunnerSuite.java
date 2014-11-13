@@ -17,8 +17,8 @@ import performance.jdk.collection.sets.TreeSetTest;
 (
 	{
 		// --------------- lists
-		ArrayListTest.class,
-		LinkedListTest.class,
+		//ArrayListTest.class,
+		//LinkedListTest.class,
 		VectorTest.class
 		
 		// ---------------- maps
