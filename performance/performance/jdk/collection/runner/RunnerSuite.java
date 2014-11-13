@@ -19,11 +19,11 @@ import performance.jdk.collection.sets.TreeSetTest;
 		// --------------- lists
 		ArrayListTest.class,
 		LinkedListTest.class,
-		VectorTest.class,
+		VectorTest.class
 		
 		// ---------------- maps
-		TreeMapTest.class,
-		HashMapTest.class
+//		TreeMapTest.class,
+//		HashMapTest.class
 //		HashTableTest.class,
 //		
 //		// ---------------- sets

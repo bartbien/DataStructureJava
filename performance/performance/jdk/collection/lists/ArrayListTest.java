@@ -3,7 +3,6 @@ package performance.jdk.collection.lists;
 import org.junit.Test;
 
 import performance.jdk.collection.runner.SizeUtils;
-import utils.CommonUtils;
 
 public class ArrayListTest
 {
