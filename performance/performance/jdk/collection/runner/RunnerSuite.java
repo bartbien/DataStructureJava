@@ -16,19 +16,19 @@ import performance.jdk.collection.sets.TreeSetTest;
 @Suite.SuiteClasses
 (
 	{
-		// --------------- lists
-		//ArrayListTest.class,
-		//LinkedListTest.class,
-		VectorTest.class
-		
-		// ---------------- maps
-//		TreeMapTest.class,
-//		HashMapTest.class
-//		HashTableTest.class,
-//		
-//		// ---------------- sets
-//		HashSetTest.class,
-//		TreeSetTest.class
+// --------------- lists
+	 ArrayListTest.class,
+	 LinkedListTest.class,
+	 VectorTest.class,
+
+// ---------------- maps
+	 TreeMapTest.class,
+	 HashMapTest.class,
+	 HashTableTest.class
+
+// ---------------- sets
+// HashSetTest.class,
+// TreeSetTest.class
 	}
 )
 public class RunnerSuite
