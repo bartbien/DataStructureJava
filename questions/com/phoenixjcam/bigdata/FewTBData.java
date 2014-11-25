@@ -7,7 +7,6 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 /**
  * http://stackoverflow.com/questions/12190326/parsing-one-terabyte-of-text-and-efficiently-counting-the-number-of-occurrences 
