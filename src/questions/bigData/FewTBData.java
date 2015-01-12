@@ -49,7 +49,7 @@ public class FewTBData
 		
 		try
 		{
-			stream = new FileInputStream("questions/com/phoenixjcam/bigdata/bigData.txt");
+			stream = new FileInputStream("src/questions/bigdata/bigData.txt");
 			//stream = new FileInputStream("C:/Users/Bart88/Desktop/bigData - Copy.txt");
 			scanner = new Scanner(stream);
 			
